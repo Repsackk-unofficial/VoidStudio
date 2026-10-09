@@ -48,7 +48,7 @@ cards.forEach(card => card.addEventListener('click', () => {
   modalCode.textContent = `${card.dataset.code} / ARCHIVE ENTRY`;
   modalDesc.textContent = card.dataset.desc;
   const pattern = card.querySelector('.pattern');
-  const imagePath = card.dataset.image;
+  const imagePath = card.dataset.image || card.querySelector('.flash-reference-image img')?.getAttribute('src');
   modalPattern.className = pattern ? `modal-pattern ${pattern.className}` : 'modal-pattern';
   modalPattern.style.backgroundImage = imagePath ? `url("${imagePath}")` : '';
   modalPattern.style.backgroundSize = imagePath ? 'contain' : '';
