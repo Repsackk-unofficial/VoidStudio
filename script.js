@@ -48,7 +48,15 @@ cards.forEach(card => card.addEventListener('click', () => {
   modalCode.textContent = `${card.dataset.code} / ARCHIVE ENTRY`;
   modalDesc.textContent = card.dataset.desc;
   const pattern = card.querySelector('.pattern');
-  modalPattern.className = `modal-pattern ${pattern.className}`;
+  const imagePath = card.dataset.image;
+  modalPattern.className = pattern ? `modal-pattern ${pattern.className}` : 'modal-pattern';
+  modalPattern.style.backgroundImage = imagePath ? `url("${imagePath}")` : '';
+  modalPattern.style.backgroundSize = imagePath ? 'contain' : '';
+  modalPattern.style.backgroundPosition = imagePath ? 'center' : '';
+  modalPattern.style.backgroundRepeat = imagePath ? 'no-repeat' : '';
+  modalPattern.style.backgroundColor = imagePath ? 'transparent' : '';
+  modalPattern.style.clipPath = imagePath ? 'none' : '';
+  modalPattern.style.filter = imagePath ? 'none' : '';
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';

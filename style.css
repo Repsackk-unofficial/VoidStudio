@@ -70,3 +70,24 @@
 .studio-note .acid{color:#fff!important}
 @media(max-width:760px){.oversigil-feature{grid-template-columns:1fr}.oversigil-copy{padding:28px}.oversigil-copy h3{font-size:60px;margin:20px 0}.oversigil-image{min-height:310px}.oversigil-image img{object-position:center}}
 @media(prefers-reduced-motion:reduce){.oversigil-image img{transition:none}}
+
+
+/* V3 FLASH EXPANSION — alternate silhouettes for the expanded archive */
+.pattern-v2:before{transform:scaleX(1.22) rotate(8deg) skewY(-5deg);filter:contrast(1.2)}
+.pattern-v2:after{transform:scaleX(.78) rotate(-9deg) skewY(7deg);border-color:#7777ff}
+.pattern-v2 i{transform:rotate(7deg);background:#7777ff!important}
+.pattern-v2 b{transform:rotate(42deg) scale(1.18)!important;border-color:#7777ff!important}
+.pattern-v2 em{width:76px;height:76px;left:calc(50% - 38px);top:calc(50% - 38px);border:1px solid #7777ff;transform:rotate(45deg);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.pattern-v2:before{filter:drop-shadow(0 0 1px #7777ff)}
+.flash-card:nth-child(n+13) .pattern{background:radial-gradient(ellipse at 50% 50%,#7777ff0b,transparent 65%)}
+.flash-card:nth-child(n+13):hover{border-color:#7777ff}
+.flash-card:nth-child(n+13):hover .card-top span:last-child,.flash-card:nth-child(n+13) .card-plus{color:#9995ff}
+.flash-card:nth-child(n+13):hover .card-plus{background:#9995ff;color:#09090b}
+
+/* Actual reference flash images added in V5 */
+.flash-reference-image{height:260px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#f1f0f3;margin:0 -15px;padding:10px;}
+.flash-reference-image img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .45s ease;mix-blend-mode:multiply;}
+.flash-image-card:hover .flash-reference-image img{transform:scale(1.045);}
+.flash-image-card .card-bottom{margin-top:0;}
+.modal-pattern[style*="background-image"]{width:100%;height:100%;background-color:#f2f1f4!important;clip-path:none!important;}
+@media(max-width:640px){.flash-reference-image{height:190px;margin:0 -10px;padding:7px;}}
