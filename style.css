@@ -30,3 +30,43 @@
 .services{padding-top:120px;padding-bottom:120px}.services-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin:52px 0 40px}.services-head h2{font-size:clamp(48px,7vw,90px);line-height:.9;letter-spacing:-.075em;margin:0}.services-head p{max-width:350px;color:#a4a39f;font-size:12px;line-height:1.9;margin:0 0 4px}.service-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.service-card{min-height:300px;border:1px solid #303033;padding:18px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s;background:linear-gradient(145deg,#121214,#0b0b0c)}.service-card:hover{border-color:var(--acid);transform:translateY(-4px)}.service-index{font:9px var(--mono);color:#777}.service-glyph{height:95px;display:grid;place-items:center;font-size:64px;color:var(--acid);text-shadow:0 0 24px #d5ff0020}.glyph-b{font-size:54px;transform:rotate(-20deg)}.glyph-c{font-size:72px}.glyph-d{font-size:58px}.service-card h3{font-size:14px;letter-spacing:.03em;margin:10px 0}.service-card p{font-size:11px;line-height:1.8;color:#999;min-height:78px}.service-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:17px}.service-tags span{font:7px var(--mono);color:var(--acid);border:1px solid #454b24;padding:5px 6px}.studio-note{padding:85px 9vw;background:var(--acid);color:#0a0a0b}.studio-note-inner{max-width:900px;margin:auto}.studio-note .eyebrow,.studio-note .tiny-code{color:#3e4700}.studio-note p{font-size:clamp(26px,5vw,58px);font-weight:700;letter-spacing:-.06em;line-height:1.1;margin:30px 0}.studio-note .acid{color:#fff}.faq{padding-top:120px;padding-bottom:130px}.faq-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;margin-top:55px}.faq-layout h2{font-size:clamp(37px,5vw,65px);line-height:.95;letter-spacing:-.075em;margin:0}.faq-list details{border-top:1px solid var(--line);padding:21px 0}.faq-list details:last-child{border-bottom:1px solid var(--line)}.faq-list summary{display:flex;justify-content:space-between;gap:20px;list-style:none;cursor:pointer;font-size:13px;font-weight:600}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary span{font-size:20px;color:var(--acid);transition:transform .2s}.faq-list details[open] summary span{transform:rotate(45deg)}.faq-list details p{color:#999;font-size:12px;line-height:1.9;max-width:520px;padding-right:20px;margin-bottom:0}
 @media(max-width:900px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.services-head{gap:25px}.faq-layout{gap:5vw}.faq-layout h2{font-size:clamp(35px,5.5vw,55px)}}
 @media(max-width:640px){.services{padding-top:85px;padding-bottom:85px}.services-head{flex-direction:column;align-items:start;margin-top:40px}.service-grid{grid-template-columns:1fr 1fr;gap:8px}.service-card{padding:13px;min-height:300px}.service-glyph{height:75px;font-size:48px}.service-card h3{font-size:12px}.service-card p{font-size:10px;min-height:105px}.service-tags span{font-size:6px}.studio-note{padding:60px 6vw}.faq{padding-top:85px;padding-bottom:90px}.faq-layout{grid-template-columns:1fr;gap:35px;margin-top:40px}.faq-layout h2{font-size:clamp(43px,11vw,65px)}.faq-list summary{font-size:12px}.pattern{height:180px}}
+
+
+/* OVERSIGIL UPDATE — high-impact visual direction */
+:root{--acid:#a9a0ff;--line:#292832}
+.hero{isolation:isolate;overflow:hidden}
+.hero:before{content:"";position:absolute;z-index:-1;inset:10% -10% 0 25%;background:radial-gradient(ellipse at 52% 46%,#6961ff24,transparent 58%);pointer-events:none}
+.hero-art{filter:drop-shadow(0 0 28px #756cff22)}
+.hero-sigil{filter:drop-shadow(0 0 8px #aaa4ff55)}
+.outline-text{-webkit-text-stroke-color:#aaa3ff}
+.acid{color:#aaa3ff!important}
+.ticker b{color:#aaa3ff}
+.flash-card{background:linear-gradient(150deg,#121116,#08080a);border-color:#33313d}
+.flash-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#aaa3ff0c,transparent 45%,#fff0);pointer-events:none}
+.flash-card:hover{border-color:#aaa3ff;box-shadow:0 12px 50px #6c63ff15}
+.pattern:before{filter:drop-shadow(0 0 8px #aaa3ff26)}
+.pattern:after{border-color:#aaa3ff!important;filter:drop-shadow(0 0 5px #aaa3ff4a)}
+.pattern i{background:#aaa3ff!important;box-shadow:0 0 12px #aaa3ff99}
+.card-plus{color:#aaa3ff;border-color:#aaa3ff55}
+.filter-btn.active{background:#aaa3ff;color:#09090b;border-color:#aaa3ff}
+.filter-btn:hover{border-color:#aaa3ff}
+.text-link:hover,.header-cta:hover{color:#aaa3ff}
+.oversigil-feature{display:grid;grid-template-columns:.72fr 1.28fr;min-height:390px;margin:38px 0 55px;border:1px solid #34313f;background:#0c0b10;overflow:hidden;position:relative}
+.oversigil-copy{padding:clamp(25px,4vw,58px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;z-index:1;background:linear-gradient(130deg,#111018,#0b0a0d)}
+.oversigil-copy h3{font-size:clamp(44px,6.5vw,88px);letter-spacing:-.09em;line-height:.79;margin:28px 0 24px;font-weight:700}
+.oversigil-copy h3 span{color:#aaa3ff}
+.oversigil-copy p{font-size:12px;line-height:1.9;color:#b2b0bb;max-width:330px}
+.oversigil-stamp{font:8px var(--mono);letter-spacing:.12em;color:#aaa3ff;margin-top:25px}
+.oversigil-image{position:relative;min-height:390px;border:0;padding:0;overflow:hidden;background:#e8e7eb;cursor:pointer;text-align:left}
+.oversigil-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c0b10aa,transparent 24%),linear-gradient(0deg,#0b0a0dbb,transparent 26%);pointer-events:none}
+.oversigil-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .5s;filter:contrast(1.08) saturate(.82)}
+.oversigil-image:hover img{transform:scale(1.055);filter:contrast(1.15) saturate(1.08)}
+.oversigil-image span{position:absolute;z-index:2;bottom:22px;right:24px;color:#fff;font:10px var(--mono);letter-spacing:.14em;border-bottom:1px solid #aaa3ff;padding-bottom:8px}
+.quote-band{background:#aaa3ff;color:#09090b}
+.quote-band .acid{color:#fff!important}
+.service-card:hover{box-shadow:0 12px 40px #aaa3ff12}
+.service-tags span{color:#aaa3ff;border-color:#514b7c}
+.studio-note{background:#aaa3ff}
+.studio-note .acid{color:#fff!important}
+@media(max-width:760px){.oversigil-feature{grid-template-columns:1fr}.oversigil-copy{padding:28px}.oversigil-copy h3{font-size:60px;margin:20px 0}.oversigil-image{min-height:310px}.oversigil-image img{object-position:center}}
+@media(prefers-reduced-motion:reduce){.oversigil-image img{transition:none}}
