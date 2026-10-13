@@ -158,9 +158,17 @@
     </section>
 
     <section class="contact section-shell" id="contact">
-      <div class="contact-art"><div class="contact-sigil"></div><span class="contact-stamp">VOIDFORM<br>AFTER DARK</span><span class="contact-art-note">TRANSMISSION READY_</span></div>
-      <div class="contact-content"><div class="section-heading"><span class="eyebrow">06 / OPEN TRANSMISSION</span><span class="tiny-code">YOUR MOVE</span></div><h2>GOTOWY NA<br><span class="acid">ZNAK?</span></h2><p>Masz pomysł, inspirację albo tylko dziwny obraz w głowie? Zacznijmy od rozmowy. Wyślij nam wiadomość — wrócimy z kolejnymi krokami.</p>
-        <a class="contact-button" href="mailto:hello@voidform.studio?subject=Zapytanie%20o%20tatua%C5%BC">ROZPOCZNIJ PROJEKT <span>↗</span></a>
+      <div class="contact-art"><div class="contact-sigil"></div><span class="contact-stamp">VOIDFORM<br>AFTER DARK</span><span class="contact-art-note">TRANSMISSION READY_</span><div class="contact-art-index">BOOKINGS<br>OPEN / 001</div></div>
+      <div class="contact-content"><div class="section-heading"><span class="eyebrow">06 / OPEN TRANSMISSION</span><span class="tiny-code">YOUR MOVE</span></div><h2>GOTOWY NA<br><span class="acid">ZNAK?</span></h2><p>Opowiedz nam o pomyśle. Im więcej szczegółów podasz, tym łatwiej będzie wrócić z konkretnymi pytaniami i wstępną wyceną.</p>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row"><label>IMIĘ / PSEUDONIM<input name="name" autocomplete="name" placeholder="Jak mamy się do Ciebie zwracać?" required maxlength="80"></label><label>E-MAIL DO ODPOWIEDZI<input name="email" type="email" autocomplete="email" placeholder="ty@przyklad.pl" required maxlength="120"></label></div>
+          <div class="form-row"><label>RODZAJ ZAPYTANIA<select name="topic" required><option value="Konsultacja / nowy projekt">Konsultacja / nowy projekt</option><option value="Wzór z archiwum FLASH">Wzór z archiwum FLASH</option><option value="Modyfikacja istniejącego wzoru">Modyfikacja istniejącego wzoru</option><option value="Wycena tatuażu">Wycena tatuażu</option><option value="Inne pytanie">Inne pytanie</option></select></label><label>ORIENTACYJNY ROZMIAR<select name="size"><option value="Nie wiem jeszcze">Nie wiem jeszcze</option><option value="Mały (do 8 cm)">Mały (do 8 cm)</option><option value="Średni (8–15 cm)">Średni (8–15 cm)</option><option value="Duży (powyżej 15 cm)">Duży (powyżej 15 cm)</option><option value="Większa kompozycja / kilka sesji">Większa kompozycja / kilka sesji</option></select></label></div>
+          <label>WYBRANY WZÓR<input name="design" id="contact-design" placeholder="Np. RAZOR CROWN / NT—001" maxlength="120"></label>
+          <label>WIADOMOŚĆ<textarea name="message" rows="5" placeholder="Miejsce na ciele, przybliżony rozmiar, pomysł, dostępność terminów…" required maxlength="3000"></textarea></label>
+          <p class="form-privacy">Po wysłaniu otworzy się Twoja aplikacja pocztowa z przygotowaną wiadomością. Formularz nie zapisuje danych na tej stronie.</p>
+          <button class="contact-button" type="submit">PRZYGOTUJ WIADOMOŚĆ <span>↗</span></button>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+        </form>
         <div class="contact-details"><div><small>MAIL / BOOKINGS</small><a href="mailto:hello@voidform.studio">hello@voidform.studio</a></div><div><small>LOCATION</small><span>KRAKÓW, POLAND</span></div><div><small>INSTAGRAM</small><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">@VOIDFORM.INK ↗</a></div></div>
       </div>
     </section>

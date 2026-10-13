@@ -16,3 +16,9 @@ REPLACED LEGACY PATTERNS
 - Replaced the first 12 broken authored SVG patterns, from RAZOR CROWN through VENOM VEIL, with the 12 supplied screenshots in archive order.
 - Cropped screenshot borders, normalized each design onto a clean white square canvas, and connected each image to its detail modal.
 - Removed the 12 obsolete SVG pattern files.
+
+CONTACT FORM
+- The booking form validates required fields and prepares a formatted email via the visitor's mail app.
+- The selected flash design is automatically inserted into the form when the user chooses “ZAPYTAJ O TEN WZÓR”.
+- This static site does not deliver or store messages by itself. Replace hello@voidform.studio in index.html and script.js with the studio's real address. For server-side delivery, connect a form provider/backend.
+- Replace the placeholder Instagram URL and location with verified studio details before publishing.

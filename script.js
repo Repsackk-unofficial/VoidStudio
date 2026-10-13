@@ -68,3 +68,38 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && modal?.classList.contains('open')) closeModal();
 });
 document.querySelector('.modal-contact')?.addEventListener('click', closeModal);
+
+// Contact form: prepares a complete email in the visitor's own mail application.
+// For real delivery without a mail app, connect a backend/form service and replace the recipient below.
+const CONTACT_EMAIL = 'hello@voidform.studio';
+const contactForm = document.querySelector('#contact-form');
+const contactDesign = document.querySelector('#contact-design');
+const contactStatus = document.querySelector('#contact-status');
+const modalContactLink = document.querySelector('.modal-contact');
+modalContactLink?.addEventListener('click', () => {
+  const name = modalTitle?.textContent?.trim() || '';
+  const code = modalCode?.textContent?.replace(/\s*\/\s*ARCHIVE ENTRY\s*/i, '').trim() || '';
+  if (contactDesign) contactDesign.value = [name, code].filter(Boolean).join(' / ');
+  closeModal();
+});
+contactForm?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  if (!contactForm.reportValidity()) return;
+  const data = new FormData(contactForm);
+  const get = (key) => String(data.get(key) || '').trim();
+  const subject = `[VOIDFORM] ${get('topic')}${get('design') ? ' — ' + get('design') : ''}`;
+  const body = [
+    `Imię: ${get('name')}`,
+    `E-mail do odpowiedzi: ${get('email')}`,
+    `Rodzaj zapytania: ${get('topic')}`,
+    `Rozmiar: ${get('size') || 'Nie podano'}`,
+    `Wybrany wzór: ${get('design') || 'Nie wybrano'}`,
+    '',
+    'Wiadomość:',
+    get('message')
+  ].join('\n');
+  const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  if (contactStatus) contactStatus.textContent = 'Otwieram aplikację pocztową z gotową wiadomością…';
+  window.location.href = mailto;
+  if (contactStatus) contactStatus.textContent = 'Jeśli aplikacja pocztowa się nie otworzy, napisz bezpośrednio na ' + CONTACT_EMAIL + '.';
+});
