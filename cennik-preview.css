@@ -1,0 +1,199 @@
+/* VOIDFORM price calculator — body tattoo preview */
+.price-page{--acid:#aaa3ff;--line:#292832;background:#09090b;color:#f1f0f5}
+.price-page .acid{color:var(--acid)!important}
+.price-page .outline-text{-webkit-text-stroke-color:#aaa3ff}
+.price-page .main-nav a[aria-current="page"]{color:var(--acid)}
+
+/* Preview of tattoo placed on a mannequin */
+.price-page .estimate-preview.estimate-preview-body{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:380px;
+  height:clamp(380px, 44vw, 500px);
+  padding:14px 10px 10px;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(170,163,255,.11), transparent 58%),
+    linear-gradient(145deg,#101014,#08080a);
+  border:1px solid rgba(170,163,255,.2);
+}
+.price-page .estimate-preview.estimate-preview-body::before{
+  content:"BODY PLACEMENT / LIVE PREVIEW";
+  position:absolute;
+  top:12px;left:12px;
+  color:#777482;
+  font:9px/1.4 "DM Mono",monospace;
+  letter-spacing:.12em;
+}
+.price-page .preview-body-wrap{
+  position:relative;
+  width:100%;
+  height:100%;
+  min-height:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.price-page .preview-facing-label{
+  position:absolute;
+  top:20px;right:8px;
+  color:var(--acid);
+  font:10px/1 "DM Mono",monospace;
+  letter-spacing:.14em;
+}
+.price-page .preview-body-svg{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:100%;
+  max-height:430px;
+  overflow:visible;
+}
+.price-page .preview-silhouette path{
+  fill:#f0eff2;
+  stroke:#d0ced8;
+  stroke-width:1.2;
+  stroke-linejoin:round;
+}
+.price-page .preview-body-lines{
+  fill:none;
+  stroke:#d3d0dc;
+  stroke-width:1.2;
+  opacity:.75;
+}
+.price-page .preview-tattoo{
+  opacity:.96;
+  mix-blend-mode:multiply;
+  filter:grayscale(1) contrast(1.2);
+}
+.price-page .preview-placement-ring{
+  fill:none;
+  stroke:rgba(170,163,255,.9);
+  stroke-width:1.3;
+  stroke-dasharray:4 4;
+  pointer-events:none;
+  opacity:1;
+  transition:all .2s ease;
+}
+.price-page .estimate-preview #selected-code{
+  position:absolute;
+  right:12px;bottom:10px;
+  color:#8c8997;
+  font:10px/1.2 "DM Mono",monospace;
+  letter-spacing:.06em;
+}
+.price-page .body-picker-stage{width:100%}
+.price-page .body-figure-pair{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  align-items:start;
+}
+.price-page .body-figure-card{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+}
+.price-page .body-figure-label{
+  color:#8d8999;
+  font:10px/1.2 "DM Mono",monospace;
+  letter-spacing:.14em;
+}
+.price-page .body-figure{
+  width:100%;
+  max-width:230px;
+  height:auto;
+  overflow:visible;
+}
+.price-page .body-base-silhouette{
+  fill:#f1f0f4;
+  stroke:#cfccd7;
+  stroke-width:1;
+  stroke-linejoin:round;
+}
+.price-page .body-zone{
+  fill:rgba(170,163,255,.025);
+  stroke:rgba(170,163,255,.25);
+  stroke-width:1;
+  cursor:pointer;
+  transition:fill .15s ease,stroke .15s ease;
+  outline:none;
+}
+.price-page .body-zone:hover,
+.price-page .body-zone:focus-visible{
+  fill:rgba(170,163,255,.28);
+  stroke:#aaa3ff;
+  stroke-width:1.7;
+}
+.price-page .body-zone.selected,
+.price-page .body-zone.active{
+  fill:rgba(170,163,255,.36);
+  stroke:#aaa3ff;
+  stroke-width:2;
+}
+.price-page .body-selection-info{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-top:12px;
+  color:#bdb9c8;
+  font:11px/1.5 "DM Mono",monospace;
+}
+.price-page .body-selection-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--acid);
+  box-shadow:0 0 12px rgba(170,163,255,.65);
+  flex:none;
+}
+.price-page .body-picker-head small{
+  display:block;
+  margin-top:5px;
+  color:#888493;
+  line-height:1.5;
+}
+.price-page .body-picker{
+  border:1px solid rgba(170,163,255,.16);
+  background:rgba(255,255,255,.015);
+  padding:16px;
+}
+.price-page .body-picker-head strong,
+.price-page .location-list-heading strong{
+  font:10px/1.4 "DM Mono",monospace;
+  letter-spacing:.12em;
+}
+.price-page .location-list-heading{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin:22px 0 10px;
+  color:#a6a2b1;
+}
+.price-page .location-list-heading span{
+  color:#777382;
+  font:10px/1.4 "DM Mono",monospace;
+}
+.price-page .location-option.active{
+  border-color:var(--acid);
+}
+.price-page .size-option.active{
+  border-color:var(--acid);
+}
+.price-page .estimate-preview img#selected-image{display:none!important}
+
+@media(max-width:900px){
+  .price-page .estimate-preview.estimate-preview-body{height:400px;min-height:400px}
+  .price-page .preview-body-svg{max-height:350px}
+}
+@media(max-width:560px){
+  .price-page .estimate-preview.estimate-preview-body{height:360px;min-height:360px}
+  .price-page .preview-body-svg{max-height:310px}
+  .price-page .body-picker{padding:10px}
+  .price-page .body-figure-pair{gap:8px}
+  .price-page .body-figure{max-width:170px}
+  .price-page .body-figure-label{font-size:9px}
+}
